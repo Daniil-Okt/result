@@ -1,0 +1,46 @@
+// Заголовки, общие БЄМ блоки и проче...
+body {
+    color: var(--bs-font-color);
+    line-height: normal;
+    
+}
+p {
+    @include adaptiveClamp(font-size, 16, 14);
+    letter-spacing: -0.32px;
+}
+p.up {
+    @include adaptiveClamp(font-size, 20, 16);
+}
+h2 {
+    font-weight: 700;
+    @include adaptiveClamp(font-size, 48, 32);
+    line-height: normal;
+    @include adaptiveClamp(margin-bottom, 24, 12);
+}
+.mw {
+    max-width: rem(450);
+    @media(max-width:950px){
+        max-width: 100%;
+    }
+}
+
+.button {
+    display: flex;
+        gap: rem(4);
+        align-items: center;
+        p {
+            text-transform: uppercase;
+            color: #4272E1;
+            transition: all 0.3s ease  0s;
+            cursor: pointer;
+        }
+        svg {
+            // margin-top: rem(2.5);
+            width: rem(15);
+        }
+        &:hover {
+            p {
+                color: #0044e4;
+            }
+        }
+}
