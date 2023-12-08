@@ -42,12 +42,12 @@ class BaseHelpers {
    * */
   static addLoadedClass() {
     window.addEventListener('load', () => {
+      // document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         this.html.classList.add('loaded');
       }, 0);
     });
   }
-
   /** Получение хеша в адресе сайта */
   static get getHash() {
     return location.hash?.replace('#', '');
